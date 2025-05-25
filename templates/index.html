@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spotify Tracks CRUD</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Spotify Tracks</h1>
+
+    <form id="trackForm">
+        <input type="hidden" id="trackId" />
+        <input type="text" id="trackName" placeholder="Track Name" required />
+        <input type="text" id="artistName" placeholder="Artist Name" required />
+        <input type="text" id="albumName" placeholder="Album Name" />
+        <input type="text" id="rating" placeholder="Rating" />
+        <input type="url" id="previewUrl" placeholder="Preview URL" />
+        <button type="submit">Save Track</button>
+        <button type="button" id="cancelEdit" style="display:none;">Cancel</button>
+    </form>
+
+    <table id="tracksTable">
+        <thead>
+            <tr>
+                <th>Track Name</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Rating</th>
+                <th>Preview</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
