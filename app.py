@@ -16,7 +16,6 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    # Render the main page template
     return render_template('index.html')
 
 @app.route('/api/tracks', methods=['GET'])
@@ -66,4 +65,4 @@ def delete_track(track_id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=5001)
