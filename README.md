@@ -42,7 +42,7 @@ The app enables users to:
 
 ## Project Structure
 
-![Project Structure](https://github.com/user-attachments/assets/0f272613-2700-42de-a006-86a1ebcaeb95)
+![Project Structure](![Image](https://github.com/user-attachments/assets/19c63341-2c82-4bd6-b2d3-f3ab101e4e70))
 
 ---
 
