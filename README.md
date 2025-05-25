@@ -1,5 +1,7 @@
 # Spotify Tracker
 
+![Image](https://github.com/user-attachments/assets/a558894e-971a-4112-818f-897f5d3cbb20)
+
 ## Overview
 This project is part of the Web Services and Applications module for the Data Analytics course at Atlantic Technological University, taught by Andrew Beatty. The Spotify Tracker is a web application that allows users to:
 
@@ -9,9 +11,8 @@ This project is part of the Web Services and Applications module for the Data An
 - Manage a local database of tracks using a Flask backend and SQLite
 - Interact with the application through a responsive web interface using Bootstrap and AJAX
 
-## Live Demo
-*(If hosted online, add your URL here)*  
-🔗 [Spotify Tracker Live Demo](#)
+## Live Demo  
+🔗 https://carlosrigueti.pythonanywhere.com/
 
 ## Features
 
@@ -29,17 +30,7 @@ This project is part of the Web Services and Applications module for the Data An
 
 ## Project Structure
 
-spotify-tracker/
-├── app.py # Flask backend application
-├── models.py # Database models using SQLAlchemy
-├── templates/
-│ └── index.html # Frontend HTML template
-├── static/
-│ ├── style.css # CSS styling with Bootstrap enhancements
-│ └── script.js # JavaScript for AJAX and UI interactivity
-├── spotify.db # SQLite database file (auto-generated)
-├── README.md # This documentation file
-└── requirements.txt # Python dependencies
+![Image](https://github.com/user-attachments/assets/0f272613-2700-42de-a006-86a1ebcaeb95)
 
 ## Installation Instructions
 
