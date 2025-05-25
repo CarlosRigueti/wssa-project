@@ -42,8 +42,9 @@ The app enables users to:
 
 ## Project Structure
 
-![Project Structure](![Image](https://github.com/user-attachments/assets/19c63341-2c82-4bd6-b2d3-f3ab101e4e70))
+![Project Structure]
 
+![Image](https://github.com/user-attachments/assets/19c63341-2c82-4bd6-b2d3-f3ab101e4e70)
 ---
 
 ## Installation Instructions
