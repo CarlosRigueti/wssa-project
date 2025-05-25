@@ -1,94 +1,104 @@
 # Spotify Tracker
 
-![Image](https://github.com/user-attachments/assets/a558894e-971a-4112-818f-897f5d3cbb20)
+![Spotify Tracker Screenshot](https://github.com/user-attachments/assets/a558894e-971a-4112-818f-897f5d3cbb20)
+
+---
 
 ## Overview
-This project is part of the Web Services and Applications module for the Data Analytics course at Atlantic Technological University, taught by Andrew Beatty. The Spotify Tracker is a web application that allows users to:
 
-- Perform CRUD operations on Spotify track records stored locally
-- Search tracks by artist name
-- View track details including album, release date, popularity, duration, and preview link
-- Manage a local database of tracks using a Flask backend and SQLite
-- Interact with the application through a responsive web interface using Bootstrap and AJAX
+Spotify Tracker is a web application developed as part of the Web Services and Applications module for the Data Analytics course at Atlantic Technological University, taught by Andrew Beatty.
 
-## Live Demo  
-🔗 https://carlosrigueti.pythonanywhere.com/
+The app enables users to:
+
+- Perform full CRUD operations on Spotify track records stored locally.
+- Search tracks by artist name with client-side filtering.
+- View detailed track information including album, release date, popularity, duration, and preview link.
+- Manage a local SQLite database through a Flask backend.
+- Interact via a responsive web interface built with Bootstrap and AJAX for seamless user experience.
+
+---
+
+## Live Demo
+
+🔗 [https://carlosrigueti.pythonanywhere.com/](https://carlosrigueti.pythonanywhere.com/)
+
+---
 
 ## Features
 
 ### Local Track Management
-- Add, view, update, and delete track records
-- Paginated display of tracks for better navigation
-- Search tracks by artist name with client-side filtering
-- Responsive design using Bootstrap 5
-- Interactive forms and buttons with JavaScript fetch API for RESTful interaction
+- Add, view, update, and delete track records.
+- Paginated track listing for improved navigation.
+- Search functionality filtering tracks by artist name in real-time.
+- Responsive UI implemented with Bootstrap 5.
+- Interactive forms and controls leveraging JavaScript Fetch API for RESTful communication.
 
 ### Backend and API
-- Flask RESTful API with endpoints for CRUD operations
-- SQLite database stored locally in the project root
-- Real-time data updates without page reloads
+- RESTful API built with Flask providing endpoints for CRUD operations.
+- Local SQLite database stored within the project root.
+- Real-time updates reflected without full page reloads.
+
+---
 
 ## Project Structure
 
-![Image](https://github.com/user-attachments/assets/0f272613-2700-42de-a006-86a1ebcaeb95)
+![Project Structure](https://github.com/user-attachments/assets/0f272613-2700-42de-a006-86a1ebcaeb95)
+
+---
 
 ## Installation Instructions
 
 ### Prerequisites
-- Python 3.7+
-- pip package manager
+
+- Python 3.7 or higher
+- pip (Python package manager)
 
 ### Setup Steps
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/spotify-tracker.git
-   cd spotify-tracker
 
-   Create and activate a virtual environment:
-   python -m venv venv
-source venv/bin/activate     # On Windows: venv\Scripts\activate
+![Image](https://github.com/user-attachments/assets/22d850e5-29c2-4747-aae5-7271969b9135)
 
-Install dependencies:
-pip install -r requirements.txt
+2. Create and activate a virtual environment:
 
-Run the application:
-python app.py
+![Image](https://github.com/user-attachments/assets/f53342d4-0c46-40c8-8f32-e2f438bdbff0)
 
-Usage Guide
-Use the search bar to filter tracks by artist name.
+3. Install dependencies:
 
-Use the pagination buttons below the table to navigate large lists.
+![Image](https://github.com/user-attachments/assets/74186c03-394b-4ba9-aa5b-c33502fb7e78)
 
-Click Update to edit a track's details.
+4. Run the application: 
 
-Click Delete to remove a track.
+![Image](https://github.com/user-attachments/assets/96aec753-5e14-4ce7-b2c5-ffcd563b026e)
 
-Click Add Track (if implemented) to add new tracks to the database.
+# Usage Guide
 
-The Play button opens the track preview link in a new tab.
+* Use the search bar to filter tracks by artist name.
+* Navigate through paginated results with the pagination controls below the track list.
+* Click Update to edit track details.
+* Click Delete to remove a track from the database.
+* Use Add Track to insert new tracks (if available).
+* Click Play to open the track preview in a new browser tab.
 
-Troubleshooting
-Make sure the SQLite database file spotify.db is writable and present in the root directory.
+# Troubleshooting
 
-Verify Python packages are installed and up to date.
+* Ensure the SQLite database file spotify.db exists and has write permissions.
+* Confirm all required Python packages are installed and up to date.
+* Check Flask console logs for any API errors if functionality breaks.
 
-If the API routes fail, check your Flask app console logs for errors.
+# Contributing
 
-Contributing
-Contributions are welcome! Please open issues or submit pull requests for bug fixes and feature enhancements.
+* Contributions are welcome! Please open issues for bugs or feature requests, and submit pull requests for improvements.
 
-Acknowledgments
-Andrew Beatty for module instruction
+# Acknowledgments
 
-Bootstrap for UI framework
+* Andrew Beatty for module instruction.
+* Bootstrap for the UI framework.
+* Flask and SQLAlchemy for backend technology.
+* Spotify API for track data inspiration.
 
-Flask and SQLAlchemy for backend technology
+# References
 
-Spotify API for track data inspiration
-
-References
-Flask Documentation
-
-Bootstrap Documentation
-
-SQLAlchemy Documentation
+* Flask Documentation
+* Bootstrap Documentation
+* SQLAlchemy Documentation
