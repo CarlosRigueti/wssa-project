@@ -3,18 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Top Spotify Tracks</title>
+  <title>Music System Management Tracker</title>
 
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #E0E0E0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+      color: #1DB954;
+      font-weight: 700;
+    }
+    p {
+      color: #B3B3B3;
+    }
+    .table {
+      color: #E0E0E0;
+    }
+    .table thead {
+      background-color: #282828;
+      border-bottom: 2px solid #1DB954;
+    }
+    .table tbody tr:hover {
+      background-color: #1AA34A33; /* subtle green transparent hover */
+    }
+    .btn-primary {
+      background-color: #1DB954;
+      border-color: #1DB954;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background-color: #1ED760;
+      border-color: #1ED760;
+      color: #121212;
+    }
+    .btn-success {
+      background-color: #1AA34A;
+      border-color: #1AA34A;
+    }
+    .btn-success:hover, .btn-success:focus {
+      background-color: #17a44a;
+      border-color: #17a44a;
+      color: #fff;
+    }
+    .btn-danger {
+      background-color: #bb2929;
+      border-color: #bb2929;
+    }
+    .btn-danger:hover, .btn-danger:focus {
+      background-color: #d82e2e;
+      border-color: #d82e2e;
+      color: #fff;
+    }
+    .page-link {
+      color: #1DB954;
+      background-color: #121212;
+      border: 1px solid #1DB954;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .page-link:hover {
+      background-color: #1DB954;
+      color: #121212;
+    }
+    .page-item.active .page-link {
+      background-color: #1ED760;
+      border-color: #1ED760;
+      color: #121212;
+    }
+    input.form-control {
+      background-color: #282828;
+      border: 1px solid #1DB954;
+      color: #E0E0E0;
+      transition: border-color 0.3s ease;
+    }
+    input.form-control:focus {
+      background-color: #282828;
+      border-color: #1ED760;
+      color: #E0E0E0;
+      box-shadow: none;
+    }
+  </style>
 </head>
 <body>
   <div class="container mt-4">
 
-    <h1 class="mb-4 text-center text-success">Top Spotify Tracks</h1>
+    <h1 class="mb-3 text-center">Music System Management Tracker</h1>
+    <p class="text-center mb-4 fs-5">
+      View and manage your personal music database with ease.<br />
+      Add new music manually and edit existing tracks to keep your collection organized and up to date.
+    </p>
 
     <!-- Search form -->
     <form id="searchForm" class="d-flex justify-content-center mb-3" onsubmit="event.preventDefault(); loadTracks();">
@@ -23,13 +104,14 @@
         id="searchInput"
         class="form-control w-50 me-2"
         placeholder="Search by artist name"
+        autocomplete="off"
       />
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
     <!-- Tracks Table -->
     <table class="table table-striped table-bordered">
-      <thead class="table-dark">
+      <thead>
         <tr>
           <th>Name</th>
           <th>Artist</th>
@@ -63,11 +145,9 @@
       currentPage = page;
       const searchTerm = document.getElementById('searchInput').value.toLowerCase();
 
-      // Fetch all tracks from your API
       const response = await fetch('/api/tracks');
       tracks = await response.json();
 
-      // Filter by artist name if search term entered
       const filtered = searchTerm
         ? tracks.filter(t => t.artist_name.toLowerCase().includes(searchTerm))
         : tracks;
@@ -125,19 +205,20 @@
     }
 
     function editTrack(id) {
-      alert('Implement edit for track ID: ' + id);
-      // Your edit logic here
+      alert('Edit feature to be implemented for track ID: ' + id);
     }
 
     function deleteTrack(id) {
       if (confirm('Are you sure you want to delete this track?')) {
-        alert('Implement delete for track ID: ' + id);
-        // Your delete logic here
+        fetch(`/api/tracks/${id}`, { method: 'DELETE' })
+          .then(res => {
+            if (res.ok) loadTracks(currentPage);
+            else alert('Failed to delete track.');
+          });
       }
     }
 
-    // Initial load
-    loadTracks();
+    document.addEventListener('DOMContentLoaded', () => loadTracks());
   </script>
 </body>
 </html>
